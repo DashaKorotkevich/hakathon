@@ -1,0 +1,19 @@
+.table-container-buttons{
+  padding: 10px 0px;
+  position: relative;
+}
+.table-container-buttons::before{
+  content: " ";
+      position: absolute;
+      width: 320px;
+      height: 2px;
+      background-color: #CDCCD7;
+      top:100%;
+      left:0;
+}
+.table-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 0px;
+}

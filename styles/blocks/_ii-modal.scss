@@ -1,0 +1,21 @@
+.ai-change{
+  font-weight: 600;
+}
+ul{
+  padding: 0px 15px;
+}
+.ai-list-item{
+  position: relative;
+  p::after{
+    content: " ";
+    display: block;
+      width: 5px;
+      height: 5px;
+      background-color: red;
+      border-radius: 50%; /* Для круглой формы */
+      position: absolute;
+      left: -10px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+  }
+}

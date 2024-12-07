@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Сервис</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header">
+        <div class="header__user">
+          <div class="header__user-status"><span>В ДВИЖЕНИИ</span></div>
+          <div class="header__user-info">
+            <div class="header__user-info_ava">
+              <a href=""><div class="ico_chat"><img src="./icon/avatar.svg" alt=""></div></a>
+            </div>
+            <div class="header__user-info_container">
+              <span class="header__user-info_name">Иван Петров</span>
+              <span class="header__user-info_role">Сотрудник</span>
+            </div>
+          </div>
+          <div class="header__user-settings">
+            <a href=""><div class="ico_chat"><img src="./icon/points.svg" alt=""></div></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="menu-vertical">
+      <ul>
+        <li><a href=""><button id="openai" class="menu-vertical-item"><img src="./icon/ai.svg" alt="ii"></button></a></li>
+        <li class="block"></li>
+        <div class="menu-vertical__container">
+          <li><a href=""><button id="openmap" class="menu-vertical-item"><img src="./icon/map.svg" alt=""></button></a></li>
+          <li><a href=""><button id="opentables" class="menu-vertical-item" ><img src="./icon/tables.svg" alt=""></button></a></li>
+          <li><a href=""><button id="opencameras"class="menu-vertical-item"><img src="./icon/cameras.svg" alt=""></button></a></li>
+          <li><a href=""><button id="openchat" class="menu-vertical-item"><img src="./icon/chat.svg" alt=""></button></a></li>
+        </div>
+      </ul>
+    </nav>
+    <div id="ai" class="modal ai">
+      <div class="modal-chat-container">
+        <div class="modal_container-h" id='modal-h'>
+          <p class='modal-h'>Рекомендации AI</p>
+          <button id="closeAi" class="modal-close" >&times;</button>
+        </div>
+        <div class="ai-list" id='modal-h'>
+          <ul>
+            <li class="ai-list-item">
+              <p>Изменить режим работы светофора с номером <span class='ai-change' id="ai-id"> 2</span> на <span class='ai-change' id="ai-recommended-mode">первый</span>, на <span class='ai-change' id="ai-recommended-mode">60 </span>минут</p>
+            </li>
+            <li class="ai-list-item">
+              <p>Изменить режим работы светофора с номером <span class='ai-change' id="ai-id"> 2</span> на <span class='ai-change' id="ai-recommended-mode">первый</span>, на <span class='ai-change' id="ai-recommended-mode">60 </span>минут</p>
+            </li>
+          </ul>
+        </div>
+          
+      </div>
+    </div>
+    <div id="chat" class="modal chat">
+      <div class="modal-container">
+        <div class="modal_container-h" id='modal-h'>
+          <p class='modal-h'>Обращения граждан</p>
+          <button id="closeChat" class="modal-close" >&times;</button>
+        </div>
+        <div class="chat-application-statistics">
+          <p>Активных: 2</p>
+          <p>Закрытых: 1</p> 
+        </div>
+        <div class="chat-appeals">
+          <div class="chat-appeals-item">
+            <div class="chat-appeals-item-ava">
+              <img src="./icon/anonim.svg" alt="">
+            </div>
+            <div class="chat-appeals-item-info">
+              <div class="chat-appeals-item-info-name">Вера</div>
+              <div class="chat-appeals-item-info-message">Сколько можно ждать ре...</div>
+            </div>
+            <div class="chat-appeals-item-time-status">
+              <p class="chat-appeals-item-time">12:30</p>
+              <div class="chat-appeals-item-status">
+                <img src="./icon/statusclose.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="chat-appeals-item">
+            <div class="chat-appeals-item-ava">
+              <img src="./icon/anonim.svg" alt="">
+            </div>
+            <div class="chat-appeals-item-info">
+              <div class="chat-appeals-item-info-name">Вера</div>
+              <div class="chat-appeals-item-info-message">Сколько можно ждать ре...</div>
+            </div>
+            <div class="chat-appeals-item-time-status">
+              <p class="chat-appeals-item-time">12:30</p>
+              <div class="chat-appeals-item-status">
+                <img src="./icon/statusopen.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="table" class="table">
+      <div id="poisk" class="poisk">
+        <input type="text" placeholder="Введите улицу" id="table-poisk-input">
+        <button id="table-submit-poisk" class="poisk-submitPoisk" >&times;</button>
+        <button id="closePoisk" class="poisk-modal-close modal-close" >&times;</button>
+
+      </div>
+      <div class="modal">
+          <div class="modal_container-h" id='modal-h'>
+            <p class='modal-h'>Информация о ул. <span id="table-name">Ставропольская</span></p>
+            <button id="closeTable" class="modal-close" >&times;</button>
+          </div>
+          <div class="table-container-buttons">
+            <button id="table-open-traffic-lights" class="modal-close" >Все светофоры</button>
+            <button id="table-opencameras" class="modal-close" >Все камеры</button>
+          </div>
+          <div class="table-info">
+            <p class="table-info-item">Количество машин: <span id="table-info-number-of-cars">20</span></p>
+            <p class="table-info-item">Средняя скорость: <span id="table-info-speed">60</span>км/ч</p>
+            <p class="table-info-item">Загруженность:   <span id="table-info-
+            density">1</span> на метр</p>
+            <p class="table-info-item">Аварийная ситуация: <span id="table-info-
+            accident">нет</span></p>
+          </div>
+      </div>
+    </div>
+    <div id="camera" class="modal camera">
+      <div class="modal-container"> 
+        .
+      </div>
+    </div>
+    
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

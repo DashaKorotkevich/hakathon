@@ -1,0 +1,47 @@
+.header{
+  background-color: transparent;
+  height: 48px;
+  width: 100%;
+  position: fixed;
+  margin-top: 30px;
+  margin-left: 50px;
+  &__user{
+    background-color: #fff;
+    width: 486px;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 5px 10px;
+    color: var(--color-dark);
+    &-status{
+      font-weight: 600;
+      position: relative;
+    }
+    &-status::before{
+      content: " ";
+      background: #CDCCD7; /* Цвет линии */
+      width: 2px; /* Ширина линии */
+      height: 20px; /* Высота линии */
+      left: 140px; /* Позиционирование линии слева */
+      position: absolute; /* Абсолютное позиционирование */
+      border-radius: var(--border-radius);
+    }
+    &-info{
+      display: flex;
+      &_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 20px;
+      }
+      &_role{
+        color: #757575;
+        display: inline-block;
+      }
+      &_name{
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.chat{
+  overflow: auto;
+}
+.chat-application-statistics{
+  width: 100px;
+  font-size: 16px;
+  color:#757575;
+  height: 60px;
+  margin: 5px 0px;
+} 
+.modal-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chat-appeals{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  &-item{
+    align-items:center;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr 0.5fr;
+    &-info{
+      padding: 10px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      &-name{
+        font-size: 20px;
+      }
+      &-message{
+        font-size: 16px;
+      }
+    }
+    &-time-status{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 16px;
+    }
+  }
+}
+
+
