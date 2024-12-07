@@ -92,6 +92,15 @@ p{
     right: -30px;
     top:0
   }
+  &-submitPoisk{
+    position: absolute;
+    right: 0px;
+    top:2.5px;
+    &-img{
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
 

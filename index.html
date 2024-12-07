@@ -105,11 +105,10 @@
     <div id="table" class="table">
       <div id="poisk" class="poisk">
         <input type="text" placeholder="Введите улицу" id="table-poisk-input">
-        <button id="table-submit-poisk" class="poisk-submitPoisk" >&times;</button>
+        <button id="table-submit-poisk" class="poisk-submitPoisk" ><img class="poisk-submitPoisk-img" src="./icon/poisk.svg" alt=""></button>
         <button id="closePoisk" class="poisk-modal-close modal-close" >&times;</button>
-
       </div>
-      <div class="modal">
+      <div class="modal" id="table-content">
           <div class="modal_container-h" id='modal-h'>
             <p class='modal-h'>Информация о ул. <span id="table-name">Ставропольская</span></p>
             <button id="closeTable" class="modal-close" >&times;</button>
@@ -119,12 +118,10 @@
             <button id="table-opencameras" class="modal-close" >Все камеры</button>
           </div>
           <div class="table-info">
-            <p class="table-info-item">Количество машин: <span id="table-info-number-of-cars">20</span></p>
-            <p class="table-info-item">Средняя скорость: <span id="table-info-speed">60</span>км/ч</p>
-            <p class="table-info-item">Загруженность:   <span id="table-info-
-            density">1</span> на метр</p>
-            <p class="table-info-item">Аварийная ситуация: <span id="table-info-
-            accident">нет</span></p>
+            <p class="table-info-item">Количество машин: <span id="table-info-number-of-cars"></span></p>
+            <p class="table-info-item">Средняя скорость: <span id="table-info-speed"></span> км/ч</p>
+            <p class="table-info-item">Загруженность:   <span id="table-info-density"></span> на метр</p>
+            <p class="table-info-item">Аварийная ситуация: <span id="table-info-accident"></span></p>
           </div>
       </div>
     </div>

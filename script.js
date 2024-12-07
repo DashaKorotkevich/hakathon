@@ -1,3 +1,15 @@
+//Метод Get
+const requestURL = 'https://jsonplaceholder.typicode.com/users'
+
+function sendRequest(method,url,body=null){
+  return fetch(url).then(response=>{
+    return response.json()
+  })
+}
+sendRequest('GET',requestURL)
+.then(data=>console.log(data))
+.catch(err=>console.log(err))
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -76,11 +88,45 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal(modal);
     };
   }
-});
-  
 
 
-// ПОИСК
+const poiskInput = document.getElementById('table-poisk-input');
+const submitPoisk = document.getElementById('table-submit-poisk');
+
+submitPoisk.onclick = function(event) {
+  event.preventDefault();
+  const userInputValue = poiskInput.value;
+
+  const foundObject = arrRoad.find(obj => obj.name === userInputValue);
+  if (foundObject) {
+    const numberOfCars = document.getElementById("table-info-number-of-cars");
+    const speed = document.getElementById("table-info-speed");
+    const density = document.getElementById("table-info-density");
+    const accident = document.getElementById("table-info-accident");
+    numberOfCars.innerHTML = `${
+      foundObject.numberOfCars}`
+      speed.innerHTML = `${
+      foundObject.speed}`
+      density.innerHTML = `${
+      foundObject.density}`
+      accident.innerHTML = `${
+      foundObject.accident}`
+  } else {
+      console.log('Объект не найден');
+  }
+  //открывается модальное окно
+  const modal = document.getElementById("table-content");
+  event.preventDefault();
+      openModal(modal);
+      const closeBtn = document.getElementById("closeTable");
+      closeBtn.onclick = function() {
+        closeModal(modal);
+      };
+}
+
+
+
+
 const arrRoad = [
   { id: 1,
     name: "Ставропольская",
@@ -88,7 +134,7 @@ const arrRoad = [
     numberOfCars: 20,
     speed: 60,
     density: 1,
-    accident: false
+    accident: 'нет'
   },
   { id: 2,
     name: "Северная",
@@ -108,24 +154,9 @@ const arrRoad = [
   },
 
 ]
-
-document.addEventListener('DOMContentLoaded', function() {
-const poiskInput = document.getElementById('table-poisk-input');
-const submitPoisk = document.getElementById('table-submit-poisk');
-
-submitPoisk.onclick = function() {
-  const userInputValue = poiskInput.value;
-
-  const foundObject = arrRoad.find(obj => obj.name === userInputValue);
-
-  if (foundObject) {
-
-  } else {
-      console.log('Объект не найден');
-  }
-
-  //открывается модальное окно
-  
-}
 });
+  
+
+
+
 
